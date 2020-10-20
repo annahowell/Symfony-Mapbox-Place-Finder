@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  database:
+    build: ./docker
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: Password123!
+      POSTGRES_DB: placefinder
+    ports:
+      - '15432:5432'

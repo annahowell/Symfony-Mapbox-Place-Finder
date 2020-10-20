@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#message {
+    position: absolute;
+    text-align: center;
+    bottom: 16px;
+    left: 50vw;
+    width: 200px;
+    margin-left: -100px;
+    font: 13px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    z-index: 2;
+    background-color: #FB8C00;
+    color: #FFF;
+    padding: 8px 0;
+    visibility: hidden;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+    margin: 0 5px 10px 0
+}
+
+.mapboxgl-popup {
+    max-width: 300px!important;
+}
+
+.mapboxgl-popup-content {
+    text-transform: capitalize;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.mapboxgl-popup-content p {
+    margin: 0
+}
+
+.mapboxgl-popup-content a {
+    text-transform: lowercase;
+}
+
+.mapboxgl-popup-content strong {
+    padding-right: 2px;
+}
+
+.mapboxgl-popup-content strong:after {
+    content: ':'
+}
+
+.mapboxgl-popup-content .popup-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.mapboxgl-popup-content .popup-address-title {
+    float: left;
+    line-height: 16px;
+    font-weight: bold;
+    width: auto;
+    margin: 2px 3px 0 0;
+}
+
+.mapboxgl-popup-content .popup-address-body {
+    float: left;
+    line-height: 16px;
+    margin: 2px 0 0;
+}
+
+.mapboxgl-popup-content .popup-button-container {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.mapboxgl-popup-content .popup-button-container button {
+    font: 13px/13px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    background-color: #3386c0;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 12px 0 0;
+    border: none;
+}
+
+.title {
+    font: 13.5px/30px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1f79b8;
+    border-radius: 3px 3px 0 0;
+}
+
+#filter .title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#filter {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    border-radius: 3px;
+    width: 130px;
+    height: 40vh;
+    color: #FFF;
+    background-color: #3386c0;
+    overflow-y: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+#filter-group input[type='checkbox']:first-child + label {
+    border-radius: 3px 3px 0 0;
+}
+
+#filter-group label:last-child {
+    border-radius: 0 0 3px 3px;
+    border: none;
+}
+
+#filter-group input[type='checkbox'] {
+    display: none;
+}
+
+#filter-group input[type='checkbox'] + label {
+    background-color: #3386c0;
+    text-transform: capitalize;
+    display: block;
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#filter-group input[type='checkbox'] + label:hover,
+#filter-group input[type='checkbox']:checked + label {
+    color: #fff;
+    background-color: #4ea0da;
+}
+
+#filter-group input[type='checkbox']:checked + label:before {
+    content: "\2713";
+    margin-right: 5px;
+}
+
+#transport-picker {
+    position: absolute;
+    top: 40vh;
+    margin-top: 10px;
+    right: 5px;
+    z-index: 1;
+    width: 130px;
+    background-color: #3386c0;
+    border-radius: 3px;
+}
+
+#transport-picker:after {
+    content: '\25BE';
+    color: #fff;
+    right: 11px;
+    top: 40px;
+    padding: 0 0 2px;
+    position: absolute;
+    pointer-events: none;
+}
+
+#transport-picker select {
+    -webkit-appearance: none;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    border-radius: 0 0 3px 3px;
+    padding: 0 8px;
+    width: 122px;
+    overflow: scroll;
+    font-weight: 600;
+    background-color: #3386c0;
+    color: #FFF;
+    height: 41px;
+    border: 0
+}
+
+#transport-picker select:focus {
+    outline: none;
+}

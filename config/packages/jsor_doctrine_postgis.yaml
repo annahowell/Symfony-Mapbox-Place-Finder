@@ -1,0 +1,37 @@
+services:
+    Jsor\Doctrine\PostGIS\Event\ORMSchemaEventSubscriber:
+        tags: [{ name: doctrine.event_subscriber, connection: default }]
+
+doctrine:
+    dbal:
+        schema_filter: ~^(?!tiger)(?!topology)~
+        mapping_types:
+            hstore: hstore
+        types:
+            geography:
+                class: 'Jsor\Doctrine\PostGIS\Types\GeographyType'
+                commented: false
+            geometry:
+                class: 'App\Types\GeometryType'
+                commented: false
+            raster:
+                class: 'Jsor\Doctrine\PostGIS\Types\RasterType'
+                commented: false
+            hstore:
+                class: Intaro\HStore\Doctrine\Types\HStoreType
+                commented: false
+
+    orm:
+        dql:
+            string_functions:
+                ST_AsGeoJSON: 'Jsor\Doctrine\PostGIS\Functions\ST_AsGeoJSON'
+                ST_GeomFromGeoJSON: 'Jsor\Doctrine\PostGIS\Functions\ST_GeomFromGeoJSON'
+                ST_Within: Jsor\Doctrine\PostGIS\Functions\ST_Within
+                ST_GeometryFromText: Jsor\Doctrine\PostGIS\Functions\ST_GeometryFromText
+                akeys: Intaro\HStore\Doctrine\Query\AKeysFunction
+                avals: Intaro\HStore\Doctrine\Query\AValsFunction
+                contains: Intaro\HStore\Doctrine\Query\ContainsFunction
+                defined: Intaro\HStore\Doctrine\Query\DefinedFunction
+                existsAny: Intaro\HStore\Doctrine\Query\ExistsAnyFunction
+                fetchval: Intaro\HStore\Doctrine\Query\FetchvalFunction
+                hstoreDifference: Intaro\HStore\Doctrine\Query\HstoreDifferenceFunction

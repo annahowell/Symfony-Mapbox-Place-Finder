@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id='map'></div>
+
+    <div id="message"></div>
+
+    <div id="filter">
+        <div class="title">Select type</div>
+        <nav id="filter-group"></nav>
+    </div>
+
+    <div id="transport-picker">
+        <div class="title">Select transport</div>
+        <select name="transport" id="transport">
+            <option value="walking">Walking</option>
+            <option value="cycling">Cycling</option>
+            <option value="driving">Driving</option>
+        </select>
+    </div>
+{% endblock %}

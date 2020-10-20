@@ -1,0 +1,91 @@
+parameters:
+    supported_types:
+        - type: bank
+          icon: bank
+
+        - type: bar
+          icon: bar
+
+        - type: bicycle_parking
+          icon: jewelry-store
+
+        - type: bicycle_rental
+          icon: bicycle
+
+        - type: cafe
+          icon: cafe
+
+        - type: car_rental
+          icon: car-rental
+
+        - type: charging_station
+          icon: charging-station
+
+        - type: cinema
+          icon: cinema
+
+        - type: dentist
+          icon: dentist
+
+        - type: doctors
+          icon: doctor
+
+        - type: drinking_water
+          icon: drinking-water
+
+        - type: fast_food
+          icon: fast-food
+
+        - type: fire_station
+          icon: fire-station
+
+        - type: fuel
+          icon: fuel
+
+        - type: hospital
+          icon: hospital
+
+        - type: library
+          icon: library
+
+        - type: litter_bin
+          icon: beer
+
+        - type: parking
+          icon: parking
+
+        - type: pharmacy
+          icon: pharmacy
+
+        - type: place_of_worship
+          icon: place-of-worship
+
+        - type: police
+          icon: police
+
+        - type: post_box
+          icon: post
+
+        - type: post_office
+          icon: post
+
+        - type: pub
+          icon: alcohol-shop
+
+        - type: restaurant
+          icon: restaurant
+
+        - type: swimming_pool
+          icon: swimming
+
+        - type: taxi
+          icon: car
+
+        - type: theatre
+          icon: theatre
+
+        - type: toilets
+          icon: toilet
+
+        - type: veterinary
+          icon: veterinary
